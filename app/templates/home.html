@@ -1,1 +1,7 @@
-<h1>Home Page</h1>
+<link rel="stylesheet" type="text/css" href="styles/main.css">
+<aside>
+  <h1>Bloc Chat</h1>
+  <div ng-repeat="room in home.rooms">
+    <p class="room"> {{room.$value}} </p>
+  </div>
+</aside>
