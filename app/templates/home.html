@@ -1,7 +1,12 @@
 <link rel="stylesheet" type="text/css" href="styles/main.css">
 <aside>
-  <h1>Bloc Chat</h1>
+  <div class="top row">
+    <h1>Bloc Chat</h1>
+    <button ng-click="home.newRoom()">New Room</button>
+  </div>
   <div ng-repeat="room in home.rooms">
     <p class="room"> {{room.$value}} </p>
   </div>
 </aside>
+<main>
+</main>

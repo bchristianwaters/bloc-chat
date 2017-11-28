@@ -6,6 +6,15 @@ aside {
   left:0;
   top:0;
 }
-h1, p {
+h1, p, button {
   margin-left: 10px;
+}
+h1, button {
+  display: inline;
+}
+main {
+  height:100vh;
+  width:75%;
+  position:fixed;
+  right:0;
 }
