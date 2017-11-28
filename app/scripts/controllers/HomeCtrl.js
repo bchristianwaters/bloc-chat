@@ -2,10 +2,10 @@
     function HomeCtrl(Room, $uibModal, $document) {
       this.rooms = Room.all;
       this.newRoom = function(){
-          console.log('blah');
           $uibModal.open({
-            templateUrl: 'newRoomForm.html',
-            appendTo: $document.find('main')
+            templateUrl: 'templates/newRoomForm.html',
+            controller: 'ModalCtrl',
+            controllerAs: 'modal'
           });
       }
     }

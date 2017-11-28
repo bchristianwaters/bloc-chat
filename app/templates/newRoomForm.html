@@ -1,0 +1,11 @@
+<link rel="stylesheet" type="text/css" href="styles/newRoomForm.css">
+<div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="modal.cancel()"><span aria-hidden="true">&times;</span></button>
+  <h3 class="modal-title">Create a New Room</h3>
+</div>
+<div class="modal-body">
+  <p>Enter a room name</p>
+</div>
+<input type="text" ng-model="modal.roomName"/>
+<button class="btn btn-warning" ng-click="modal.cancel()">Cancel</button>
+<button class="btn btn-primary" ng-click="modal.createRoom()">Create Room</button>
