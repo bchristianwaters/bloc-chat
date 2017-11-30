@@ -12,12 +12,12 @@
   <div class="header">
     <h2>{{home.currentRoom}}</h2>
   </div>
-  <div ng-repeat="message in home.messages">
+  <div ng-repeat="message in home.messages[0]">
     <div ng-class-odd="'oddMessage'" ng-class-even="'evenMessage'">
-    <h4 class="username">{{message[0].username}}</h4>
+    <h4 class="username">{{message.username}}</h4>
     <div class="messageContents">
-    <p class="message">{{message[0].content}}</P>
-    <div class="sentTime">{{message[0].sentAt}}</div>
+    <p class="message">{{message.content}}</P>
+    <div class="sentTime">{{message.sentAt}}</div>
     </div>
     </div>
   </div>
