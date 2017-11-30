@@ -18,3 +18,24 @@ main {
   position:fixed;
   right:0;
 }
+.header{
+  margin: 10px;
+}
+.oddMessage {
+  background-color: #F0F8FF;
+}
+.messageContents {
+  display: flex;
+}
+.username {
+  padding: 10px 10px 0px 10px;
+  width: 100%;
+}
+.sentTime {
+  position: absolute;
+  right: 5px;
+}
+.message {
+  padding-left: 10px;
+  width: 90%
+}

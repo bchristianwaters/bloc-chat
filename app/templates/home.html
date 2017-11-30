@@ -5,8 +5,20 @@
     <button ng-click="home.newRoom()">New Room</button>
   </div>
   <div ng-repeat="room in home.rooms">
-    <p class="room"> {{room.$value}} </p>
+    <p class="room" ng-click="home.selectRoom(room.$value, room.$id)"> {{room.$value}} </p>
   </div>
 </aside>
 <main>
+  <div class="header">
+    <h2>{{home.currentRoom}}</h2>
+  </div>
+  <div ng-repeat="message in home.messages">
+    <div ng-class-odd="'oddMessage'" ng-class-even="'evenMessage'">
+    <h4 class="username">{{message[0].username}}</h4>
+    <div class="messageContents">
+    <p class="message">{{message[0].content}}</P>
+    <div class="sentTime">{{message[0].sentAt}}</div>
+    </div>
+    </div>
+  </div>
 </main>
