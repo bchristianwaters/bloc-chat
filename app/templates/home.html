@@ -14,11 +14,15 @@
   </div>
   <div ng-repeat="message in home.messages[0]">
     <div ng-class-odd="'oddMessage'" ng-class-even="'evenMessage'">
-    <h4 class="username">{{message.username}}</h4>
-    <div class="messageContents">
-    <p class="message">{{message.content}}</P>
-    <div class="sentTime">{{message.sentAt}}</div>
+      <h4 class="username">{{message.username}}</h4>
+      <div class="messageContents">
+        <p class="message">{{message.content}}</P>
+        <div class="sentTime">{{message.sentAt}}</div>
+      </div>
     </div>
-    </div>
+  </div>
+  <div class="message-bar">
+    <input class="message-bar-text" type="text" ng-model="home.currentMessage"/>
+    <button class="btn btn-primary" ng-click="home.sendMessage()">Send</button>
   </div>
 </main>

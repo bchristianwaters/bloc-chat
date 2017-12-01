@@ -10,7 +10,6 @@
          backdrop  : 'static',
          keyboard  : false
        });
-      var currentUser = $cookies.get('blocChatCurrentUser');
     }
   }
 

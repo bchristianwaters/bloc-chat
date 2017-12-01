@@ -13,6 +13,11 @@
       return messageArray;
     };
 
+    Message.send = function(newMessage) {
+      console.log("newMessage");
+      messages.$add(newMessage);
+    };
+
     return Message;
   }
 

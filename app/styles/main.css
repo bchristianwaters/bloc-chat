@@ -39,3 +39,15 @@ main {
   padding-left: 10px;
   width: 90%
 }
+.message-bar-text {
+  position:fixed;
+  bottom: 0px;
+  width: 70%;
+  height: 34px;
+}
+.message-bar button {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  width: 10%;
+}
