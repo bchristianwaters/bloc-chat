@@ -1,1 +1,11 @@
-
+.input-field, .submit-button, .modal-body, .modal-header {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+.input-field input {
+  width: 90%;
+}
+.submit-button button {
+  width: 90%;
+}
