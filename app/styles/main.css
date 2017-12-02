@@ -20,6 +20,18 @@ main {
 }
 .header{
   margin: 10px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 70%;
+  height: 10%;
+}
+.message-list {
+  margin-top: 70px;
+  margin-bottom: 34px;
+  width: 100%;
+  max-height: 80%;
+  overflow-y: auto;
 }
 .oddMessage {
   background-color: #F0F8FF;
@@ -32,22 +44,21 @@ main {
   width: 100%;
 }
 .sentTime {
-  position: absolute;
-  right: 5px;
 }
 .message {
   padding-left: 10px;
-  width: 90%
+  width: 95%
 }
 .message-bar-text {
   position:fixed;
   bottom: 0px;
   width: 70%;
-  height: 34px;
+  height: 6%;
 }
 .message-bar button {
   position: fixed;
   bottom: 0px;
   right: 0px;
   width: 10%;
+  height: 6%;
 }

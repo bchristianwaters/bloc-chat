@@ -12,6 +12,7 @@
   <div class="header">
     <h2>{{home.currentRoom}}</h2>
   </div>
+  <div class="message-list">
   <div ng-repeat="message in home.messages[0]">
     <div ng-class-odd="'oddMessage'" ng-class-even="'evenMessage'">
       <h4 class="username">{{message.username}}</h4>
@@ -20,6 +21,7 @@
         <div class="sentTime">{{message.sentAt}}</div>
       </div>
     </div>
+  </div>
   </div>
   <div class="message-bar">
     <input class="message-bar-text" type="text" ng-model="home.currentMessage"/>
