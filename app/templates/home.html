@@ -11,6 +11,7 @@
 <main>
   <div class="header">
     <h2>{{home.currentRoom}}</h2>
+    <button class="btn btn-warning" ng-click="home.signOut()">Sign Out</button>
   </div>
   <div class="message-list">
   <div ng-repeat="message in home.messages">

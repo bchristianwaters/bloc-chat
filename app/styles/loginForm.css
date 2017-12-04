@@ -1,0 +1,18 @@
+.input-field, .submit-button, .modal-body, .modal-header {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+.input-field input {
+  width: 90%;
+}
+.submit-button button {
+  width: 90%;
+}
+.other-login-path {
+  text-align: center;
+  margin: 10px;
+}
+.other-login-path p {
+  display: inline;
+}

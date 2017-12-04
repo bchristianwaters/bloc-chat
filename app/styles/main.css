@@ -26,6 +26,14 @@ main {
   width: 70%;
   height: 10%;
 }
+.header button{
+  margin: 10px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10%;
+  height: 5%;
+}
 .message-list {
   margin-top: 70px;
   width: 100%;
