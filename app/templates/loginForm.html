@@ -2,8 +2,8 @@
 <div class="modal-header">
   <h3 class="modal-title">{{usermodal.state}}</h3>
 </div>
-<div class="error-bar">
-  {{usermodal.errorDisplay}}
+<div class="google-login">
+  <button class="btn btn-secondary" ng-click="usermodal.googlesignin()">Sign in with Google</button>
 </div>
 <div class="input-field" ng-show="usermodal.state=='Register'">
   <input type="text" ng-model="usermodal.username" placeholder="Username"/>
