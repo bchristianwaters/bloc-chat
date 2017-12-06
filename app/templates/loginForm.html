@@ -5,23 +5,30 @@
 <div class="error-bar">
   {{usermodal.errorDisplay}}
 </div>
+<div class="input-field" ng-show="usermodal.state=='Register'">
+  <input type="text" ng-model="usermodal.username" placeholder="Username"/>
+</div>
 <div class="input-field">
   <input type="text" ng-model="usermodal.email" placeholder="Email"/>
 </div>
 <div class="input-field">
-  <input type="text" ng-model="usermodal.password" placeholder="Password"/>
+  <input type="password" ng-model="usermodal.password" placeholder="Password"/>
 </div>
-<div class="submit-button" ng-show="usermodal.state=='Register'">
-  <button class="btn btn-primary" ng-click="usermodal.register()">Register</button>
+<div ng-show="usermodal.state=='Register'">
+  <div class="submit-button">
+    <button class="btn btn-primary" ng-click="usermodal.register()">Register</button>
+  </div>
+  <div class="other-login-path">
+    <p> Already have an account? </p>
+    <button class="btn btn-secondary" ng-click="usermodal.state='Log In'">Log In</h3>
+  </div>
 </div>
-<div class="other-login-path" ng-show="usermodal.state=='Register'">
-  <p> Already have an account? </p>
-  <button class="btn btn-secondary" ng-click="usermodal.state='Log In'">Log In</h3>
-</div>
-<div class="submit-button" ng-show="usermodal.state=='Log In'">
-  <button class="btn btn-primary" ng-click="usermodal.signin()">Log In</button>
-</div>
-<div class="other-login-path" ng-show="usermodal.state=='Log In'">
-  <p> Don't have an account? </p>
-  <button class="btn btn-secondary" ng-click="usermodal.state='Register'">Register</h3>
+<div ng-show="usermodal.state=='Log In'">
+  <div class="submit-button">
+    <button class="btn btn-primary" ng-click="usermodal.signin()">Log In</button>
+  </div>
+  <div class="other-login-path">
+    <p> Don't have an account? </p>
+    <button class="btn btn-secondary" ng-click="usermodal.state='Register'">Register</h3>
+  </div>
 </div>

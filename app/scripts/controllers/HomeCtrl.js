@@ -1,11 +1,12 @@
 (function() {
-    function HomeCtrl(Message, Room, $uibModal, $document, $cookies, $fireBase) {
+    function HomeCtrl(User, Message, Room, $uibModal, $document, $cookies, $fireBase) {
       var hc = this;
       this.rooms = Room.all;
       this.currentRoom = localStorage.currentRoom || "";
       this.currentRoomId = localStorage.currentRoomId || "";
       this.currentMessage = "";
       this.messages = Message.getByRoomId(this.currentRoomId);
+      this.User = User;
 
       this.newRoom = function(){
           $uibModal.open({
@@ -26,34 +27,23 @@
       this.sendMessage = function(){
         var currentDate = new Date();
         var currentTime = currentDate.getHours()+":"+currentDate.getMinutes();
+        var un = hc.User.username;
         var messageObject = {
           content: hc.currentMessage,
           roomId: hc.currentRoomId,
           sentAt: currentTime,
-          username: $cookies.get('blocChatCurrentUser')
+          username: un
         }
         Message.send(messageObject);
         hc.currentMessage = "";
       }
 
       this.signOut = function(){
-        firebase.auth().signOut().then(function() {
-          // Sign-out successful.
-          $uibModal.open({
-             templateUrl: 'templates/loginForm.html',
-             controller: 'UsernameCtrl',
-             controllerAs: 'usermodal',
-             backdrop  : 'static',
-             keyboard  : false
-           });
-        }).catch(function(error) {
-          // An error happened.
-          alert(error.message);
-        });
+        User.signOut()
       }
     }
 
     angular
         .module('blocChat')
-        .controller('HomeCtrl', ['Message', 'Room', '$uibModal', '$document', '$cookies', '$firebase', HomeCtrl]);
+        .controller('HomeCtrl', ['User', 'Message', 'Room', '$uibModal', '$document', '$cookies', '$firebase', HomeCtrl]);
 })();
