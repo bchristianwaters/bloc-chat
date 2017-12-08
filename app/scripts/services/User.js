@@ -9,17 +9,13 @@
     };
 
     User.setUsername = function(username){
-      console.log(username);
       var user = firebase.auth().currentUser;
-      console.log(user);
       user.updateProfile({
         displayName: username,
       }).then(function() {
         // Update successful.
-        console.log(username);
       }).catch(function(error) {
         // An error happened.
-        console.log(error);
       });
     }
 

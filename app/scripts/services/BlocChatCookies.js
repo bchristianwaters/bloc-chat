@@ -5,6 +5,7 @@
       if (user) {
         // User is signed in.
         User.username = user.displayName;
+        console.log(user);
       } else {
         // No user is signed in.
         $uibModal.open({
