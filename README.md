@@ -2,11 +2,11 @@
 
 An instant messaging app
 
-![alt text](screenshots/bloc-chat-new-room.png?raw=true "Title")
-
-![alt text](/screenshots/bloc-chat-new-room.png?raw=true "Title")
+![Signin](screenshots/bloc-chat-signin?raw=true "Signin")
 
 ![New Room](screenshots/bloc-chat-new-room.png?raw=true "New Room")
+
+![Chat](/screenshots/bloc-chat-room.png?raw=true "Chat")
 
 ## Pull Down the Code
 
