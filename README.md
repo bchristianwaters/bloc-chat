@@ -2,7 +2,7 @@
 
 An instant messaging app
 
-![Signin](screenshots/bloc-chat-signin?raw=true "Signin")
+![Signin](screenshots/bloc-chat-signin.png?raw=true "Signin")
 
 ![New Room](screenshots/bloc-chat-new-room.png?raw=true "New Room")
 
